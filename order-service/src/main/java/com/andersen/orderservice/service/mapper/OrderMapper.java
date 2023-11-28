@@ -17,6 +17,7 @@ public class OrderMapper {
 
     public OrderResponseDto toDto(Order order) {
         return OrderResponseDto.builder()
+                .orderNumber(order.getOrderNumber())
                 .build();
     }
 
