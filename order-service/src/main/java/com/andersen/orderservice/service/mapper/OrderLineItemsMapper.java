@@ -8,7 +8,9 @@ import org.springframework.stereotype.Service;
 public class OrderLineItemsMapper {
     public OrderLineItems toModel (OrderLineItemsDto orderLineItemsDto) {
         return OrderLineItems.builder()
-                .
+                .price(orderLineItemsDto.getPrice())
+                .quantity(orderLineItemsDto.getQuantity())
+                .skuCode(orderLineItemsDto.getSkuCode())
                 .build();
     }
 }
